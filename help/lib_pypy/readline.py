@@ -1,1 +1,0 @@
-/Users/gabriel/.pyenv/versions/pypy-2.6.0/lib_pypy/readline.py
