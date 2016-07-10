@@ -1,25 +1,9 @@
 """
-import mido
-import time
-
-out = mido.open_output()
-for x in range(0, 100):
-    output.send(mido.Message('note_on', note=60, velocity=64))
-    time.sleep(0)
-
+Tell me what you are.
 """
 
-import mido
-import time
-import random
+notes = dict(C=0, D=2, E=4, F=5, G=7, A=9, B=11)
 
-output = mido.open_output()
 
-for x in range(0, 1000):
-    note=random.randint(0, 120)
-    vel=random.randint(40,100)
-    output.send(mido.Message('note_on', note=note, velocity=vel))
-    print(note, vel)
-    time.sleep(4)
-    output.send(mido.Message('note_off', note=note, velocity=vel))
-    time.sleep(1)
+def scale_octave(note_int, scale):
+    return note_int + scale * 12

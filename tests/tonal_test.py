@@ -1,7 +1,7 @@
 import unittest
-# import mingus
-# import live
+from tonal import scale_octave
+
 
 class TestTonal(unittest.TestCase):
-    def test_nothing(self):
-        pass
+    def test_scale_octave(self):
+        self.assertEqual(12, scale_octave(0, 1))
