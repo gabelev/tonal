@@ -1,7 +1,8 @@
 import unittest
-from tonal import scale_octave
+import tonal
 
+to = tonal.Tonal()
 
 class TestTonal(unittest.TestCase):
     def test_scale_octave(self):
-        self.assertEqual(12, scale_octave(0, 1))
+        self.assertEqual(12, to.scale(0, 1))
