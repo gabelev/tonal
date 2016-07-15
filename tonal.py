@@ -3,11 +3,8 @@
 import random
 
 from scales import scale_names, TonalScale
-import mingus.core.notes
-import mingus.core.scales
+import mingus.core.notes as notes
 
-notes = mingus.core.notes
-scales = mingus.core.scales
 ts = TonalScale()
 
 notes_map = dict(C=0, D=2, E=4, F=5, G=7, A=9, B=11)
@@ -69,5 +66,9 @@ class Tonal(object):
                 new = self.add_octave(item, x)
                 if new <= 120:
                     midi_range.append(new)
-        midi_set = set(midi_range)
-        return midi_set
+        return midi_range
+
+    def create_sorted_midi(self, scale, base):
+        """Let me tell you what I am."""
+        midi = set(self.create_midi_note_range(scale, base))
+        return sorted(midi)
