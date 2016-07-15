@@ -20,6 +20,8 @@ class TonalScale(object):
     def select_scale(self, name, base_note):
         """Let me tell you what I am."""
         # TODO: Fix the diatonic arguments
+        if not isinstance(base_note, str):
+            return TypeError
         if name == "Diatonic":
             return self.scales.Diatonic(base_note, (0, 7))
         if name == "Ionian":
