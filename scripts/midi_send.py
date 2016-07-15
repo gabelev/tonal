@@ -1,3 +1,5 @@
+"""Tell me what I am."""
+
 import mido
 import time
 import random
@@ -13,10 +15,22 @@ for x in range(0, 1000):
     output.send(mido.Message('note_on', note=note, velocity=vel, channel=1))
     print(note, vel)
     time.sleep(4)
-    output.send(mido.Message('note_on', note=note_2, velocity=vel_2, channel=2))
+    output.send(
+        mido.Message(
+            'note_on',
+            note=note_2,
+            velocity=vel_2,
+            channel=2
+        ))
     print(note_2, vel_2)
     time.sleep(4)
     output.send(mido.Message('note_off', note=note, velocity=vel, channel=1))
     time.sleep(1)
-    output.send(mido.Message('note_off', note=note_2, velocity=vel_2, channel=2))
+    output.send(
+        mido.Message(
+            'note_off',
+            note=note_2,
+            velocity=vel_2,
+            channel=2
+        ))
     time.sleep(1)

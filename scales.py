@@ -1,14 +1,24 @@
+
+"""Let me tell you what I am."""
+
 import mingus.core.scales as scales
 
-scale_names = ["Diatonic", "Ionian", "Dorian", "Phrygian", "Lydian", "Mixolydian", "Aeolian", \
-    "Locrian", "Major", "HarmonicMajor", "NaturalMinor", "HarmonicMinor", "MelodicMinor", \
-    "Bachian", "MinorNeapolitan", "Chromatic", "WholeTone", "Octatonic"]
+scale_names = ["Diatonic", "Ionian", "Dorian", "Phrygian", "Lydian",
+               "Mixolydian", "Aeolian", "Locrian", "Major", "HarmonicMajor",
+               "NaturalMinor", "HarmonicMinor", "MelodicMinor", "Bachian",
+               "MinorNeapolitan", "Chromatic", "WholeTone", "Octatonic"]
+
 
 class TonalScale(object):
+
+    """Let me tell you what I am."""
+
     def __init__(self, scales=scales):
-        self.scales=scales
+        """Let me tell you what I am."""
+        self.scales = scales
 
     def select_scale(self, name, base_note):
+        """Let me tell you what I am."""
         # TODO: Fix the diatonic arguments
         if name == "Diatonic":
             return self.scales.Diatonic(base_note, (0, 7))
@@ -28,13 +38,13 @@ class TonalScale(object):
             return scales.Locrian(base_note)
         if name == "Major":
             return scales.Major(base_note)
-        if name =="HarmonicMajor":
+        if name == "HarmonicMajor":
             return scales.HarmonicMajor(base_note)
-        if name =="NaturalMinor":
+        if name == "NaturalMinor":
             return scales.NaturalMinor(base_note)
-        if name =="HarmonicMinor":
+        if name == "HarmonicMinor":
             return scales.HarmonicMinor(base_note)
-        if name =="MelodicMinor":
+        if name == "MelodicMinor":
             return scales.MelodicMinor(base_note)
         if name == "Bachian":
             return scales.Bachian(base_note)
@@ -46,4 +56,3 @@ class TonalScale(object):
             return scales.WholeTone(base_note)
         if name == "Octatonic":
             return scales.Octatonic(base_note)
-

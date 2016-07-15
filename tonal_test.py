@@ -24,7 +24,7 @@ class TestTonal(unittest.TestCase):
         self.assertIn(to.pick_scale(), scale_names)
 
     def test_pick_base_note(self):
-        self.assertIn(notes.note_to_int(to.pick_base_note()), range(0,10))
+        self.assertIn(notes.note_to_int(to.pick_base_note()), range(0,13))
 
 class TestScales(unittest.TestCase):
 
