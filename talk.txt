@@ -1,0 +1,10 @@
+1. splash
+2. why - about code and music
+3. this is a graph. data visualization
+    a. an established aesthetic vocabualry 
+    b. ideas of proportion and scale, contrast, foreground background, persepective
+    c. all of this established aesthetic unserstanding allows us to sucessfully and beutifully visually encode data.
+    d. so let's do the same thing, but to sonically encode data. 
+4. data audiation (source).
+    a. the idea is to apply the some of that existing, underlying aesthetic understanding to musically encoding data
+    b. 
