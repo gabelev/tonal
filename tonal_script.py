@@ -83,16 +83,21 @@ if __name__ == "__main__":
                         channel=chan))
                 except:
                     print("error")
+                    pass
                 time.sleep(1)
-                print(key, value, "note on", chan)
+                print(key, value, "channel:", chan)
                 statsd.gauge(key, value)
         for item in data:
             parse(item)
             for key, value in values.iteritems():
                 chan = chans.get(key)
-                output.send(mido.Message(
-                    'note_off',
-                    note=mapping(value, mid_range),
-                    channel=chan))
+                try:
+                    output.send(mido.Message(
+                        'note_off',
+                        note=mapping(value, mid_range),
+                        channel=chan))
+                except:
+                    print("error")
+                    pass
                 time.sleep(1)
-                print(key, value, "note off", chan)
+                print(key, value, "channel:", chan)
