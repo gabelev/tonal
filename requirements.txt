@@ -1,4 +1,8 @@
-Cython == 0.24
-mingus == 0.5.1
-pylive == 0.1.5
-
+datadog==0.12.0
+decorator==4.0.10
+mido==1.1.14
+mingus==0.5.1
+py==1.4.31
+pytest==2.9.2
+requests==2.10.0
+simplejson==3.8.2
