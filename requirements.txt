@@ -1,0 +1,4 @@
+Cython == 0.24
+mingus == 0.5.1
+pylive == 0.1.5
+
