@@ -78,6 +78,8 @@ def mapping(value, midi):
     """The object maps values to notes."""
     if value >= 120:
         return mapping(value % 10, midi)
+    if value < 0:
+        return mapping(int(value * 10), midi)
     for item in midi:
         if item == value:
             return value
