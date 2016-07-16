@@ -72,3 +72,14 @@ class Tonal(object):
         """Let me tell you what I am."""
         midi = set(self.create_midi_note_range(scale, base))
         return sorted(midi)
+
+
+def mapping(value, midi):
+    """The object maps values to notes."""
+    if value >= 120:
+        return mapping(value % 10, midi)
+    for item in midi:
+        if item == value:
+            return value
+        if item > value:
+            return item
