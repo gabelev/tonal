@@ -7,4 +7,14 @@
     d. so let's do the same thing, but to sonically encode data. 
 4. data audiation (source).
     a. the idea is to apply the some of that existing, underlying aesthetic understanding to musically encoding data
-    b. 
+    b. how do we do this? 
+        i. in an very rudamental way, we map numerical vaules (data) to scales and harmonic ???
+5. libraries -- 
+    a. mido
+    b. mingus
+
+5. the pipeline
+    a. data stream
+        i. api call via requests.
+        ii. parse json, add to in-memory representaiton
+        iii. 
