@@ -1,10 +1,43 @@
-1. splash
-2. why - about code and music
-3. this is a graph. data visualization
-    a. an established aesthetic vocabualry 
-    b. ideas of proportion and scale, contrast, foreground background, persepective
-    c. all of this established aesthetic unserstanding allows us to sucessfully and beutifully visually encode data.
+1. Intro
+
+2. Background - about code and music
+    a. How did I get here?
+    b. I played music for many years. Then discovered coding.
+    c. Right now, I am working as an engineer at an ad tech company where we deal 
+       with massive amounts of data and do something called programmatic advertising. 
+
+3. John Cage's Music of Changes: Music of Changes is a piece for solo piano by John Cage. Composed in 1951 for pianist and friend David Tudor, it is a ground-breaking piece of indeterminate music. The process of composition involved applying decisions made using the I Ching, a Chinese classic text that is commonly used as a divination system. The I Ching was applied to large charts of sounds, durations, dynamics, tempo and densities.
+
+4. this is a graph. data visualization
+    a. an established aesthetic vocabulary 
+    b. ideas of proportion and scale, contrast, foreground background, perspective
+    c. all of this established aesthetic understanding allows us to successfully and beautifully visually encode data.
     d. so let's do the same thing, but to sonically encode data. 
-4. data audiation (source).
+
+5. data audiation (source).
+    a. Audiation is a term Edward Gordon coined in 1975 to refer to comprehension and internal realization of music, or the sensation of an individual hearing or feeling sound when it is not physically present.
     a. the idea is to apply the some of that existing, underlying aesthetic understanding to musically encoding data
-    b. 
+    b. how do we do this? 
+        i. in an very rudimental way, we map numerical values (data) to scales and harmonic ???
+
+6. libraries -- 
+    a. mingus
+    b. mido
+    c. requests
+    d. pyLive
+
+7. the pipeline
+    a. data stream
+        i. api call via requests.
+        ii. parse json, add to in-memory representation
+        iii. 
+
+8. Tonal
+
+9. Midi
+
+10. Ableton
+
+11.
+
+12.
