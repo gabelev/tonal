@@ -11,8 +11,6 @@ notes_map = dict(C=0, D=2, E=4, F=5, G=7, A=9, B=11)
 
 base_scale = ['C', 'D', 'E', 'F', 'G', 'A', 'B']
 
-# TODO: how to handle frequency? and Tempo?
-
 
 class Tonal(object):
 
