@@ -37,7 +37,7 @@ class Tonal(object):
     def pick_scale(self, scale=None):
         """Let me tell you what I am."""
         if not scale:
-            return scale_names[random.randint(0, len(scale_names)-1)]
+            return scale_names[random.randint(0, len(scale_names) - 1)]
         else:
             return scale
 

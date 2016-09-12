@@ -12,27 +12,17 @@ from datadog import statsd
 
 from tonal import Tonal, mapping
 
-output = mido.open_output()
-to = Tonal()
-
-try:
-    arg1 = sys.argv[1]
-    arg2 = sys.argv[2]
-    if arg1 is None:
-        mid_range = to.create_sorted_midi("HarmonicMajor", "C")
-    else:
-        mid_range = to.create_sorted_midi(str(arg1), str(arg2))
-except Exception:
-    mid_range = to.create_sorted_midi("HarmonicMajor", "C")
-
+# configuration and keys
 config = ConfigParser.RawConfigParser()
 config.read('tonal.ini')
-
 API_KEY = config.get("tonal", "API_KEY")
 GEO = config.get("tonal", "GEO")
 call = config.get("tonal", "call")
-
 weather = call.format(API_KEY, GEO)
+
+# initialize the midi lib and tonal libs
+output = mido.open_output()
+to = Tonal()
 
 start = time.time()
 max_time = 100
@@ -71,6 +61,17 @@ def parse(record):
 
 keys = ["temperature", "apparentTemperature", "dewPoint", "humidity",
         "visibility", "ozone"]
+
+# flags for initialization
+try:
+    arg1 = sys.argv[1]
+    arg2 = sys.argv[2]
+    if arg1 is None:
+        mid_range = to.create_sorted_midi("HarmonicMajor", "C")
+    else:
+        mid_range = to.create_sorted_midi(str(arg1), str(arg2))
+except Exception:
+    mid_range = to.create_sorted_midi("HarmonicMajor", "C")
 
 if __name__ == "__main__":
 
