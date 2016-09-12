@@ -15,13 +15,15 @@ from tonal import Tonal, mapping
 output = mido.open_output()
 to = Tonal()
 
-
-arg1 = sys.argv[1]
-arg2 = sys.argv[2]
-if arg1 is None:
+try:
+    arg1 = sys.argv[1]
+    arg2 = sys.argv[2]
+    if arg1 is None:
+        mid_range = to.create_sorted_midi("HarmonicMajor", "C")
+    else:
+        mid_range = to.create_sorted_midi(str(arg1), str(arg2))
+except Exception:
     mid_range = to.create_sorted_midi("HarmonicMajor", "C")
-else:
-    mid_range = to.create_sorted_midi(str(arg1), str(arg2))
 
 config = ConfigParser.RawConfigParser()
 config.read('tonal.ini')
