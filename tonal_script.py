@@ -2,6 +2,7 @@
 
 """Tell me what I am."""
 
+import ConfigParser
 import mido
 import time
 import requests
@@ -22,10 +23,12 @@ if arg1 is None:
 else:
     mid_range = to.create_sorted_midi(str(arg1), str(arg2))
 
+config = ConfigParser.RawConfigParser()
+config.read('tonal.ini')
 
-API_KEY = "3029dd3b274c8f534b16d89a14db6118"
-GEO = "40.712784,-74.005941"
-call = "https://api.forecast.io/forecast/{0}/{1}"
+API_KEY = config.get("tonal", "API_KEY")
+GEO = config.get("tonal", "GEO")
+call = config.get("tonal", "call")
 
 weather = call.format(API_KEY, GEO)
 
