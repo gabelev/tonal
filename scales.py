@@ -1,25 +1,22 @@
-
-"""Let me tell you what I am."""
-
 import mingus.core.scales as scales
 
-scale_names = ["Diatonic", "Ionian", "Dorian", "Phrygian", "Lydian",
+
+SCALE_NAMES = ["Diatonic", "Ionian", "Dorian", "Phrygian", "Lydian",
                "Mixolydian", "Aeolian", "Locrian", "Major", "HarmonicMajor",
                "NaturalMinor", "HarmonicMinor", "MelodicMinor", "Bachian",
                "MinorNeapolitan", "Chromatic", "WholeTone", "Octatonic"]
 
 
 class TonalScale(object):
-
-    """Let me tell you what I am."""
+    """
+    Builds scales (integer arrays of notes that belong together) based on
+    Notes in a given scale in Western music.
+    """
 
     def __init__(self, scales=scales):
-        """Let me tell you what I am."""
         self.scales = scales
 
     def select_scale(self, name, base_note):
-        """Let me tell you what I am."""
-        # TODO: Fix the diatonic arguments
         if not isinstance(base_note, str):
             return TypeError
         if name == "Diatonic":

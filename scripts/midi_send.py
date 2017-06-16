@@ -1,5 +1,3 @@
-"""Tell me what I am."""
-
 import mido
 import time
 import random
